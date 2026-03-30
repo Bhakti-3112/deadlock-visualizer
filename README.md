@@ -1,7 +1,16 @@
-## 
+Implementation Plan
 
-This source code has been exported from [Caffeine](https://caffeine.ai/)
+Backend: store tasks, resources, allocations, requests as stable state
 
-### Coming Soon
+Frontend: graph state managed in React 
+Use SVG for graph rendering 
 
-We are working on tools to help you build locally and deploy your apps back to caffeine.
+DFS cycle detection on every state change
+
+Priority modal shown when deadlock detected
+
+Resolution engine: identify cycle participants, sort by priority, release lowest-priority task resources, re-run allocation queue, repeat
+
+Control panel on left/right side, graph canvas takes center stage
+
+
