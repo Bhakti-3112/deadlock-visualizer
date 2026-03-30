@@ -1,17 +1,7 @@
-# deadlock-visualizer
-Implementation Plan
+## 
 
-Backend: store tasks, resources, allocations, requests as stable state
+This source code has been exported from [Caffeine](https://caffeine.ai/)
 
-Frontend: graph state managed in React 
+### Coming Soon
 
-Use SVG for graph rendering 
-
-DFS cycle detection on every state change
-
-Priority modal shown when deadlock detected
-
-Resolution engine: identify cycle participants, sort by priority, release lowest-priority task resources, re-run allocation queue, repeat
-
-Control panel on left/right side, graph canvas takes center stage
-
+We are working on tools to help you build locally and deploy your apps back to caffeine.

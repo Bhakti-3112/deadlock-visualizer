@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "BricolageGrotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Light / white theme */
+    --background: 1 0 0;
+    --foreground: 0.18 0.02 255;
+    --card: 0.99 0.003 250;
+    --card-foreground: 0.18 0.02 255;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.02 255;
+    --primary: 0.5 0.2 258;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.95 0.01 250;
+    --secondary-foreground: 0.3 0.03 255;
+    --muted: 0.95 0.008 250;
+    --muted-foreground: 0.5 0.02 255;
+    --accent: 0.93 0.015 258;
+    --accent-foreground: 0.3 0.05 258;
+    --destructive: 0.52 0.22 27;
+    --destructive-foreground: 1 0 0;
+    --border: 0.88 0.012 255;
+    --input: 0.9 0.01 255;
+    --ring: 0.5 0.2 258;
+    /* Status */
+    --success: 0.52 0.18 145;
+    --warning: 0.65 0.17 75;
+    --warning-bg: 0.97 0.04 85;
+    /* Sidebar */
+    --sidebar: 0.97 0.008 250;
+    --sidebar-foreground: 0.18 0.02 255;
+    --sidebar-primary: 0.5 0.2 258;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.93 0.015 258;
+    --sidebar-accent-foreground: 0.3 0.05 258;
+    --sidebar-border: 0.88 0.012 255;
+    --sidebar-ring: 0.5 0.2 258;
+    /* Chart */
+    --chart-1: 0.5 0.2 258;
+    --chart-2: 0.52 0.18 145;
+    --chart-3: 0.65 0.17 75;
+    --chart-4: 0.52 0.22 27;
+    --chart-5: 0.6 0.15 320;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+@keyframes pulse-edge {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-edge {
+  animation: pulse-edge 1.2s ease-in-out infinite;
+}
